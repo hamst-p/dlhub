@@ -1,8 +1,0 @@
-# すべて無視するルール
-*
-
-# .gitignore 自体は追跡する
-!.gitignore
-
-# venv フォルダは無視しない
-!venv/

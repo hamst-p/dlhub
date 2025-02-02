@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Downloader</title>
+</head>
+<body>
+    <h1>YouTube Downloader</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li style="color: red;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="POST" action="/download">
+        <input type="url" name="url" placeholder="YouTube URL" required>
+        <select name="format">
+            <option value="video">MP4 動画</option>
+            <option value="audio">MP4 音声</option>
+        </select>
+        <button type="submit">ダウンロード</button>
+    </form>
+</body>
+</html>
